@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>do you want to take a selfie with me??</h3>
+    <button onclick="makeRed()">Yes</button>
+    <button id="one-time">One time</button>
+    <button id="btn-no">NO</button>
+    <button id="make-green">Absoultly Note</button>
+    <button id="make-yellow">make it yellow</button>
+    <button id="make-pink">make it pink</button>
+
+    <script>
+      // option 2 (commonly used);
+      function makeRed(){
+        document.body.style.backgroundColor = 'lightGrey';
+      }
+
+
+
+      // option 3
+
+      const makeBlack = document.getElementById('one-time');
+      makeBlack.onclick = itsBlue;
+
+      function itsBlue(){
+        document.body.style.backgroundColor = 'blue'
+      }
+
+
+      // option 3 another....
+      
+      const makeTomato = document.getElementById('btn-no');
+      makeTomato.onclick = function makeTomato(){
+        document.body.style.backgroundColor = 'tomato'
+      }
+
+      // option 4.....
+      const makeButtonYellow = document.getElementById('make-yellow');
+      makeButtonYellow.addEventListener('click', function(){
+        document.body.style.backgroundColor = 'yellow';
+      });
+      // option 4 another.......
+      const makePink = document.getElementById('make-pink');
+      makePink.addEventListener('click', clickPink);
+
+      function clickPink(){
+        document.body.style.backgroundColor = 'pink';
+      };
+
+
+      // final option.........
+      document.getElementById('make-green').addEventListener('click', function makeGreen(){
+        document.body.style.backgroundColor = 'green';
+      })
+
+    </script>
+</body>
+</html>

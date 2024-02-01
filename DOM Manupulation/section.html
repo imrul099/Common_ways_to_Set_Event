@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main id="main-content">
+        <section>
+            <h3>Place I want to visit</h3>
+            <ul>
+                <li>bandorbon</li>
+                <li>barisal</li>
+                <li>dhaka</li>
+                <li>khulna</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Fruits I want to eat</h3>
+            <ul>
+                <li>water melone</li>
+                <li>zambura</li>
+                <li>mango</li>
+                <li>banana</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Book I want to Read</h3>
+            <ul>
+                <li>ami topu</li>
+                <li>opekkha</li>
+                <li>shes prohor</li>
+                <li>jibon juddho</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        // const sections = document.querySelectorAll('section');
+        // // console.log(sections);
+        // for(section of sections){
+        //     section.style.border = '2px solid steelblue';
+        //     section.style.padding = '5px'
+        //     section.style.backgroundColor = 'lightgrey'
+        // }
+        const mainContainer = document.getElementById('main-content');
+        const section = document.createElement('section');
+        const h3 = document.createElement('h3');
+        h3.innerText = 'My Favorite Food';
+        section.append(h3);
+        const ul = document.createElement('ul');
+        const li1 = document.createElement('li');
+        li1.innerText = 'pitha';
+        ul.append(li1);
+        const li2 = document.createElement('li');
+        li2.innerText = 'simay';
+        ul.append(li2);
+        const li3 = document.createElement('li');
+        li3.innerText = 'payes';
+        ul.append(li3);
+        section.append(ul);
+        mainContainer.append(section);
+
+
+        // set innerHtml directly
+        const sectionDress = document.createElement('section');
+        sectionDress.innerHTML = `
+        <h3>My Favorite Dress</h3>
+        <ul>
+            <li>t-shirt</li>
+            <li>pant</li>
+            <li>shirt</li>
+        </ul>
+        `
+
+        mainContainer.append(sectionDress);
+
+
+    </script>
+</body>
+</html>

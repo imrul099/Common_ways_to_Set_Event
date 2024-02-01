@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1 id="domevent">DOM Event Handelers</h1>
+    <h3 id="handler-bar">Default text</h3>
+    <button id="event-lister" onclick="handelOnClick()">onclick handle Event</button>
+
+    <section>
+        <h3 id="updated-text">something is written</h3>
+        <input id="input-field" type="text">
+        <button id="btn-update">update</button>
+    </section>
+
+    <script>
+        function handelOnClick(){
+            const handlerBar = document.getElementById('handler-bar');
+            handlerBar.innerText = 'samiyaaaaaaaaaaaaa ahha ahha'
+            
+        }
+            // option 2
+
+            document.getElementById('event-lister').addEventListener('click', function(){
+            const handelerBar = document.getElementById('domevent');
+            handelerBar.innerText = 'kamon acho tmi';
+            })
+
+            // input type function
+            document.getElementById('btn-update').addEventListener('click', function(){
+                const inputField = document.getElementById('input-field');
+                const inputText = inputField.value;
+                
+                const updatedText = document.getElementById('updated-text');
+                updatedText.innerText = inputText
+                
+                inputField.value = '';
+                
+            })
+
+
+            
+
+    </script>
+ </body>
+ </html>
